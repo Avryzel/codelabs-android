@@ -1,0 +1,11 @@
+<resources>
+<!--  Name Card String  -->
+    <string name="app_name">Business Card</string>
+    <string name="full_name">Jawir Silit Hitam</string>
+    <string name="title">Beginner Android Developer</string>
+
+<!--  Contact Card String  -->
+    <string name="phone_number">081236969</string>
+    <string name="email">jawirsilithitam@gamil.com</string>
+    <string name="social_media">@JawirSilitHitam</string>
+</resources>
