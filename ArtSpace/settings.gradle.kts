@@ -21,4 +21,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "Art Space"
 include(":app")
- 
