@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">Art Space</string>
     <string name="artwork_title01">JaneDoe</string>
-    <string name="artwork_artist01">モ誰 (2023)</string>
+    <string name="artwork_artist01">モ誰</string>
+    <string name="artwork_made01">(2023)</string>
     <string name="previous_button">Previous</string>
     <string name="next_button">Next</string>
 </resources>

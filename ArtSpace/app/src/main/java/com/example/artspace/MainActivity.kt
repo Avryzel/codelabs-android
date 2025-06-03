@@ -26,9 +26,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.artspace.ui.theme.ArtSpaceTheme
 
 class MainActivity : ComponentActivity() {
@@ -90,21 +92,35 @@ fun ArtworkWall() {
 
 @Composable
 fun ArtworkDescriptor() {
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .height(100.dp)
-            .background(Color.LightGray),
-
-        horizontalAlignment = Alignment.Start
+    Box(
+        contentAlignment = Alignment.Center,
     ) {
-        Text(
-            text = stringResource(R.string.artwork_title01),
-
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(100.dp)
+                .background(Color(0xFFE0E0E0))
+                .padding(16.dp),
+            verticalArrangement = Arrangement.Center
+        ) {
+            Text(
+                text = stringResource(R.string.artwork_title01),
+                fontSize = 32.sp,
+                fontWeight = FontWeight.W200,
             )
-        Text(
-            text = stringResource(R.string.artwork_artist01)
-        )
+            Row {
+                Text(
+                    text = stringResource(R.string.artwork_artist01),
+                    fontWeight = FontWeight.Bold
+
+                )
+                Spacer(modifier = Modifier.width(4.dp))
+                Text(
+                    text = stringResource(R.string.artwork_made01),
+                    fontWeight = FontWeight.Light
+                )
+            }
+        }
     }
 }
 
