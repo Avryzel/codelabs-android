@@ -32,6 +32,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.artspace.ui.theme.ArtSpaceTheme
+import kotlin.math.max
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -127,19 +128,23 @@ fun ArtworkDescriptor() {
 @Composable
 fun DisplayController() {
     Row(
-        horizontalArrangement = Arrangement.SpaceEvenly,
+        horizontalArrangement = Arrangement.Center,
         modifier = Modifier
+            .widthIn(max = 400.dp)
             .fillMaxWidth()
     ) {
         Button(
             onClick = {},
-            modifier = Modifier.width(130.dp)
+            modifier = Modifier.width(150.dp)
         ) {
             Text(stringResource(R.string.previous_button))
         }
+        Spacer(
+            modifier = Modifier.width(32.dp)
+        )
         Button(
             onClick = {},
-            modifier = Modifier.width(130.dp)
+            modifier = Modifier.width(150.dp)
         ) {
             Text(stringResource(R.string.next_button))
         }
