@@ -21,18 +21,20 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.artspace.ui.theme.ArtSpaceTheme
-import kotlin.math.max
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,24 +54,28 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun ArtSpaceLayout() {
+    var pageIndex by remember { mutableIntStateOf(0) }
+
     Box(
         modifier = Modifier
-            .fillMaxSize()
-            .padding(16.dp),
+            .fillMaxSize(),
         contentAlignment = Alignment.Center
     ) {
         Column(
             modifier = Modifier
                 .widthIn(max = 400.dp)
-                .fillMaxWidth(),
+                .fillMaxWidth()
+                .padding(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
-            ArtworkWall()
-            Spacer(modifier = Modifier.height(16.dp))
-            ArtworkDescriptor()
-            Spacer(modifier = Modifier.height(26.dp))
-            DisplayController()
+            if (pageIndex == 0) {
+                ArtworkWall()
+                Spacer(modifier = Modifier.height(24.dp))
+                ArtworkDescriptor()
+                Spacer(modifier = Modifier.height(24.dp))
+                DisplayController()
+            }
         }
     }
 }
