@@ -70,9 +70,13 @@ fun ArtSpaceLayout() {
             verticalArrangement = Arrangement.Center
         ) {
             if (pageIndex == 0) {
-                ArtworkWall()
+                ArtworkWall(imageRes = R.drawable.mogoon_art01)
                 Spacer(modifier = Modifier.height(24.dp))
-                ArtworkDescriptor()
+                ArtworkDescriptor(
+                    titleRes = R.string.artwork_title01,
+                    artistRes = R.string.artwork_artist01,
+                    yearRes = R.string.artwork_made01
+                )
                 Spacer(modifier = Modifier.height(24.dp))
                 DisplayController()
             }
@@ -81,8 +85,8 @@ fun ArtSpaceLayout() {
 }
 
 @Composable
-fun ArtworkWall() {
-    val image = painterResource(R.drawable.mogoon_art01)
+fun ArtworkWall(imageRes: Int) {
+    val image = painterResource(imageRes)
 
     Box(
         modifier = Modifier
@@ -98,7 +102,11 @@ fun ArtworkWall() {
 }
 
 @Composable
-fun ArtworkDescriptor() {
+fun ArtworkDescriptor(
+    titleRes: Int,
+    artistRes: Int,
+    yearRes: Int
+) {
     Box(
         contentAlignment = Alignment.Center,
     ) {
@@ -111,19 +119,19 @@ fun ArtworkDescriptor() {
             verticalArrangement = Arrangement.Center
         ) {
             Text(
-                text = stringResource(R.string.artwork_title01),
+                text = stringResource(titleRes),
                 fontSize = 32.sp,
                 fontWeight = FontWeight.W200,
             )
             Row {
                 Text(
-                    text = stringResource(R.string.artwork_artist01),
+                    text = stringResource(artistRes),
                     fontWeight = FontWeight.Bold
 
                 )
                 Spacer(modifier = Modifier.width(4.dp))
                 Text(
-                    text = stringResource(R.string.artwork_made01),
+                    text = stringResource(yearRes),
                     fontWeight = FontWeight.Light
                 )
             }
