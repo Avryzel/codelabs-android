@@ -69,7 +69,7 @@ fun ArtSpaceLayout() {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
-            when(pageIndex) {
+            when (pageIndex) {
                 0 -> {
                     ArtworkWall(imageRes = R.drawable.mogoon_art01)
                     Spacer(modifier = Modifier.height(24.dp))
@@ -78,9 +78,8 @@ fun ArtSpaceLayout() {
                         artistRes = R.string.artwork_artist01,
                         yearRes = R.string.artwork_made01
                     )
-                    Spacer(modifier = Modifier.height(24.dp))
-                    DisplayController()
                 }
+
                 1 -> {
                     ArtworkWall(imageRes = R.drawable.mogoon_art01)
                     Spacer(modifier = Modifier.height(24.dp))
@@ -89,9 +88,8 @@ fun ArtSpaceLayout() {
                         artistRes = R.string.artwork_artist01,
                         yearRes = R.string.artwork_made01
                     )
-                    Spacer(modifier = Modifier.height(24.dp))
-                    DisplayController()
                 }
+
                 2 -> {
                     ArtworkWall(imageRes = R.drawable.mogoon_art01)
                     Spacer(modifier = Modifier.height(24.dp))
@@ -100,9 +98,8 @@ fun ArtSpaceLayout() {
                         artistRes = R.string.artwork_artist01,
                         yearRes = R.string.artwork_made01
                     )
-                    Spacer(modifier = Modifier.height(24.dp))
-                    DisplayController()
                 }
+
                 else -> {
                     ArtworkWall(imageRes = R.drawable.mogoon_art01)
                     Spacer(modifier = Modifier.height(24.dp))
@@ -111,10 +108,18 @@ fun ArtSpaceLayout() {
                         artistRes = R.string.artwork_artist01,
                         yearRes = R.string.artwork_made01
                     )
-                    Spacer(modifier = Modifier.height(24.dp))
-                    DisplayController()
                 }
             }
+            Spacer(modifier = Modifier.height(24.dp))
+            DisplayController(
+                onPrevious = {
+                    if (pageIndex > 0)
+                        pageIndex--
+                },
+                onNext = {
+                    if (pageIndex < 2)
+                        pageIndex++
+                })
         }
     }
 }
@@ -175,7 +180,7 @@ fun ArtworkDescriptor(
 }
 
 @Composable
-fun DisplayController() {
+fun DisplayController(onPrevious: () -> Unit, onNext: () -> Unit) {
     Row(
         horizontalArrangement = Arrangement.Center,
         modifier = Modifier
@@ -183,7 +188,7 @@ fun DisplayController() {
             .fillMaxWidth()
     ) {
         Button(
-            onClick = {},
+            onClick = { onPrevious },
             modifier = Modifier.width(150.dp)
         ) {
             Text(stringResource(R.string.previous_button))
@@ -192,7 +197,7 @@ fun DisplayController() {
             modifier = Modifier.width(32.dp)
         )
         Button(
-            onClick = {},
+            onClick = { onNext },
             modifier = Modifier.width(150.dp)
         ) {
             Text(stringResource(R.string.next_button))
