@@ -69,16 +69,51 @@ fun ArtSpaceLayout() {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
-            if (pageIndex == 0) {
-                ArtworkWall(imageRes = R.drawable.mogoon_art01)
-                Spacer(modifier = Modifier.height(24.dp))
-                ArtworkDescriptor(
-                    titleRes = R.string.artwork_title01,
-                    artistRes = R.string.artwork_artist01,
-                    yearRes = R.string.artwork_made01
-                )
-                Spacer(modifier = Modifier.height(24.dp))
-                DisplayController()
+            when(pageIndex) {
+                0 -> {
+                    ArtworkWall(imageRes = R.drawable.mogoon_art01)
+                    Spacer(modifier = Modifier.height(24.dp))
+                    ArtworkDescriptor(
+                        titleRes = R.string.artwork_title01,
+                        artistRes = R.string.artwork_artist01,
+                        yearRes = R.string.artwork_made01
+                    )
+                    Spacer(modifier = Modifier.height(24.dp))
+                    DisplayController()
+                }
+                1 -> {
+                    ArtworkWall(imageRes = R.drawable.mogoon_art01)
+                    Spacer(modifier = Modifier.height(24.dp))
+                    ArtworkDescriptor(
+                        titleRes = R.string.artwork_title01,
+                        artistRes = R.string.artwork_artist01,
+                        yearRes = R.string.artwork_made01
+                    )
+                    Spacer(modifier = Modifier.height(24.dp))
+                    DisplayController()
+                }
+                2 -> {
+                    ArtworkWall(imageRes = R.drawable.mogoon_art01)
+                    Spacer(modifier = Modifier.height(24.dp))
+                    ArtworkDescriptor(
+                        titleRes = R.string.artwork_title01,
+                        artistRes = R.string.artwork_artist01,
+                        yearRes = R.string.artwork_made01
+                    )
+                    Spacer(modifier = Modifier.height(24.dp))
+                    DisplayController()
+                }
+                else -> {
+                    ArtworkWall(imageRes = R.drawable.mogoon_art01)
+                    Spacer(modifier = Modifier.height(24.dp))
+                    ArtworkDescriptor(
+                        titleRes = R.string.artwork_title01,
+                        artistRes = R.string.artwork_artist01,
+                        yearRes = R.string.artwork_made01
+                    )
+                    Spacer(modifier = Modifier.height(24.dp))
+                    DisplayController()
+                }
             }
         }
     }
