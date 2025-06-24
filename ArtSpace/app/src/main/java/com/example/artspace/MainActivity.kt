@@ -54,7 +54,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun ArtSpaceLayout() {
-    var pageIndex by remember { mutableIntStateOf(0) }
+    var pageIndex by remember { mutableIntStateOf(2) }
 
     Box(
         modifier = Modifier
@@ -131,6 +131,9 @@ fun ArtworkWall(imageRes: Int) {
     Box(
         modifier = Modifier
             .background(Color.LightGray)
+            .fillMaxWidth()
+            .height(500.dp),
+        contentAlignment = Alignment.Center
     ) {
         Image(
             painter = image,
