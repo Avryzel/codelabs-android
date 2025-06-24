@@ -3,6 +3,12 @@
     <string name="artwork_title01">JaneDoe</string>
     <string name="artwork_artist01">モ誰</string>
     <string name="artwork_made01">(2023)</string>
+    <string name="artwork_title02">空崎ヒナ</string>
+    <string name="artwork_artist02">モ誰</string>
+    <string name="artwork_made02">(2023)</string>
+    <string name="artwork_title03">陸八魔アル</string>
+    <string name="artwork_artist03">モ誰</string>
+    <string name="artwork_made03">(2023)</string>
     <string name="previous_button">Previous</string>
     <string name="next_button">Next</string>
 </resources>

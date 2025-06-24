@@ -81,22 +81,22 @@ fun ArtSpaceLayout() {
                 }
 
                 1 -> {
-                    ArtworkWall(imageRes = R.drawable.mogoon_art01)
+                    ArtworkWall(imageRes = R.drawable.mogoon_art02)
                     Spacer(modifier = Modifier.height(24.dp))
                     ArtworkDescriptor(
-                        titleRes = R.string.artwork_title01,
-                        artistRes = R.string.artwork_artist01,
-                        yearRes = R.string.artwork_made01
+                        titleRes = R.string.artwork_title02,
+                        artistRes = R.string.artwork_artist02,
+                        yearRes = R.string.artwork_made02
                     )
                 }
 
                 2 -> {
-                    ArtworkWall(imageRes = R.drawable.mogoon_art01)
+                    ArtworkWall(imageRes = R.drawable.mogoon_art03)
                     Spacer(modifier = Modifier.height(24.dp))
                     ArtworkDescriptor(
-                        titleRes = R.string.artwork_title01,
-                        artistRes = R.string.artwork_artist01,
-                        yearRes = R.string.artwork_made01
+                        titleRes = R.string.artwork_title03,
+                        artistRes = R.string.artwork_artist03,
+                        yearRes = R.string.artwork_made03
                     )
                 }
 
@@ -188,7 +188,7 @@ fun DisplayController(onPrevious: () -> Unit, onNext: () -> Unit) {
             .fillMaxWidth()
     ) {
         Button(
-            onClick = { onPrevious },
+            onClick = { onPrevious() },
             modifier = Modifier.width(150.dp)
         ) {
             Text(stringResource(R.string.previous_button))
@@ -197,7 +197,7 @@ fun DisplayController(onPrevious: () -> Unit, onNext: () -> Unit) {
             modifier = Modifier.width(32.dp)
         )
         Button(
-            onClick = { onNext },
+            onClick = { onNext() },
             modifier = Modifier.width(150.dp)
         ) {
             Text(stringResource(R.string.next_button))
