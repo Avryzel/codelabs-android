@@ -1,3 +1,10 @@
 <resources>
+    <!--  App Name  -->
     <string name="app_name">30 Days App</string>
+
+    <!--  Day Entries  -->
+    <string name="day_1_number">Day 1</string>
+    <string name="day_1_title">Hiragana Basics</string>
+    <string name="day_1_descriptions">Learn the first 10 hiragana characters and their pronunciation.</string>
+
 </resources>
