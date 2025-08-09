@@ -1,5 +1,6 @@
 package com.example.a30daysapp.ui.theme
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -87,6 +88,7 @@ private val darkScheme = darkColorScheme(
     surfaceContainerHighest = surfaceContainerHighestDark,
 )
 
+@SuppressLint("ComposableNaming")
 @Composable
 fun _30DaysAppTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
