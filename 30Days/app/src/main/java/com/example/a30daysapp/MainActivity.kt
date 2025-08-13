@@ -12,6 +12,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Card
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -21,6 +24,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -77,13 +81,15 @@ fun TaskItem(
     tasks: Task,
     modifier: Modifier = Modifier
 ) {
-    Card(modifier = modifier) {
+    Card(modifier = modifier.padding(horizontal = 16.dp)) {
         Column(
             modifier = modifier
                 .padding(16.dp)
         ) {
             TaskLabel(taskDay = tasks.dayRes)
+            Spacer(Modifier.height(8.dp))
             TaskImage(taskImage = tasks.imageRes)
+            Spacer(Modifier.height(8.dp))
             TaskInfo(taskTitle = tasks.titleRes, taskDesc = tasks.descriptionRes)
         }
     }
@@ -104,7 +110,9 @@ fun TaskImage(
     modifier: Modifier = Modifier
 ) {
     Image(
-        modifier = modifier,
+        modifier = modifier
+            .fillMaxWidth(),
+        contentScale = ContentScale.Crop,
         painter = painterResource(taskImage),
         contentDescription = null
     )
