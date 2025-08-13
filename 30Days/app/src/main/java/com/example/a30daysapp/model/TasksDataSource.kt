@@ -11,7 +11,7 @@ object TasksDataSource {
             descriptionRes = R.string.day_1_descriptions
         ),
         Task(
-            dayRes = R.string.day_2_title,
+            dayRes = R.string.day_2_number,
             imageRes = R.drawable.ic_day1_book_kanji,
             titleRes = R.string.day_2_title,
             descriptionRes = R.string.day_2_descriptions
