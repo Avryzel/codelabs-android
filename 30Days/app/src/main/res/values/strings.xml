@@ -7,4 +7,8 @@
     <string name="day_1_title">Hiragana Basics</string>
     <string name="day_1_descriptions">Learn the first 10 hiragana characters and their pronunciation.</string>
 
+    <string name="day_2_number">Day 2</string>
+    <string name="day_2_title">Katakana Basics</string>
+    <string name="day_2_descriptions">Learn the first 10 katakana characters and their pronunciation.</string>
+
 </resources>
