@@ -81,7 +81,7 @@ fun TaskItem(
     tasks: Task,
     modifier: Modifier = Modifier
 ) {
-    Card(modifier = modifier.padding(horizontal = 16.dp)) {
+    Card(modifier = modifier.padding(bottom = 8.dp, start = 16.dp, end = 16.dp)) {
         Column(
             modifier = modifier
                 .padding(16.dp)
