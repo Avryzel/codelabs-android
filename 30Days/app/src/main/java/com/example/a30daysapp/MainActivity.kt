@@ -134,14 +134,25 @@ fun TaskInfo(
     }
 }
 
-@SuppressLint("ComposableNaming")
+
 @Preview(
     showBackground = true,
     showSystemUi = true
 )
 @Composable
-fun _30DaysAppPreview() {
-    _30DaysAppTheme {
+fun LightPreview() {
+    _30DaysAppTheme(darkTheme = false) {
+        _30DaysApp()
+    }
+}
+
+@Preview(
+    showBackground = true,
+    showSystemUi = true
+)
+@Composable
+fun DarkPreview() {
+    _30DaysAppTheme(darkTheme = true) {
         _30DaysApp()
     }
 }
