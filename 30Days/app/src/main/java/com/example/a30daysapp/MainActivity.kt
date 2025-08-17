@@ -73,7 +73,8 @@ fun _30DaysTopBar() {
     TopAppBar(
         title = {
             Text(
-                text = "30 Days Of Japanese"
+                text = "30 Days Of Japanese",
+                style = MaterialTheme.typography.titleLarge
             )
         }
     )
@@ -109,7 +110,8 @@ fun TaskLabel(
     @StringRes taskDay: Int,
 ) {
     Text(
-        text = stringResource(taskDay)
+        text = stringResource(taskDay),
+        style = MaterialTheme.typography.headlineMedium
     )
 }
 
@@ -135,10 +137,12 @@ fun TaskInfo(
 ) {
     Column(modifier = modifier) {
         Text(
-            text = stringResource(taskTitle)
+            text = stringResource(taskTitle),
+            style = MaterialTheme.typography.titleMedium
         )
         Text(
-            text = stringResource(taskDesc)
+            text = stringResource(taskDesc),
+            style = MaterialTheme.typography.bodyLarge
         )
     }
 }
