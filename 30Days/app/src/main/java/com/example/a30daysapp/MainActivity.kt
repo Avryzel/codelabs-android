@@ -17,7 +17,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -40,7 +42,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             _30DaysAppTheme {
                 Surface(
-                    modifier = Modifier.fillMaxSize()
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background
                 ) {
                     _30DaysApp()
                 }
@@ -81,7 +84,13 @@ fun TaskItem(
     tasks: Task,
     modifier: Modifier = Modifier
 ) {
-    Card(modifier = modifier.padding(bottom = 8.dp, start = 16.dp, end = 16.dp)) {
+    Card(
+        modifier = modifier.padding(bottom = 8.dp, start = 16.dp, end = 16.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.surfaceVariant,
+            contentColor = MaterialTheme.colorScheme.onSurface
+        )
+    ) {
         Column(
             modifier = modifier
                 .padding(16.dp)
