@@ -11,4 +11,116 @@
     <string name="day_2_title">Katakana Basics</string>
     <string name="day_2_descriptions">Learn the first 10 katakana characters and their pronunciation.</string>
 
+    <string name="day_3_number">Day 3</string>
+    <string name="day_3_title">Greetings</string>
+    <string name="day_3_descriptions">Practice common greetings and polite phrases in Japanese.</string>
+
+    <string name="day_4_number">Day 4</string>
+    <string name="day_4_title">Numbers 1–20</string>
+    <string name="day_4_descriptions">Learn how to count from 1 to 20 in Japanese.</string>
+
+    <string name="day_5_number">Day 5</string>
+    <string name="day_5_title">Katakana Basics</string>
+    <string name="day_5_descriptions">Learn the first 10 katakana characters and their pronunciation.</string>
+
+    <string name="day_6_number">Day 6</string>
+    <string name="day_6_title">Simple Questions</string>
+    <string name="day_6_descriptions">Practice asking simple yes/no questions using か.</string>
+
+    <string name="day_7_number">Day 7</string>
+    <string name="day_7_title">Days of the Week</string>
+    <string name="day_7_descriptions">Learn the seven days of the week in Japanese.</string>
+
+    <string name="day_8_number">Day 8</string>
+    <string name="day_8_title">Basic Verbs</string>
+    <string name="day_8_descriptions">Study common verbs like to eat, to go, to see, and to do.</string>
+
+    <string name="day_9_number">Day 9</string>
+    <string name="day_9_title">Time Expressions</string>
+    <string name="day_9_descriptions">Learn how to tell the time and use words like “today, tomorrow, yesterday.”</string>
+
+    <string name="day_10_number">Day 10</string>
+    <string name="day_10_title">Family Words</string>
+    <string name="day_10_descriptions">Learn vocabulary for family members and relationships.</string>
+
+    <string name="day_11_number">Day 11</string>
+    <string name="day_11_title">Colors</string>
+    <string name="day_11_descriptions">Practice basic colors in Japanese with examples.</string>
+
+    <string name="day_12_number">Day 12</string>
+    <string name="day_12_title">Food Vocabulary</string>
+    <string name="day_12_descriptions">Learn names of common foods and drinks in Japanese.</string>
+
+    <string name="day_13_number">Day 13</string>
+    <string name="day_13_title">School Items</string>
+    <string name="day_13_descriptions">Study vocabulary related to school and classroom objects.</string>
+
+    <string name="day_14_number">Day 14</string>
+    <string name="day_14_title">Basic Particles</string>
+    <string name="day_14_descriptions">Introduction to は, が, and を particles in sentences.</string>
+
+    <string name="day_15_number">Day 15</string>
+    <string name="day_15_title">Adjectives 1</string>
+    <string name="day_15_descriptions">Learn simple adjectives to describe things (big, small, new, old).</string>
+
+    <string name="day_16_number">Day 16</string>
+    <string name="day_16_title">Places</string>
+    <string name="day_16_descriptions">Learn vocabulary for locations like park, station, school, and home.</string>
+
+    <string name="day_17_number">Day 17</string>
+    <string name="day_17_title">Directions</string>
+    <string name="day_17_descriptions">Practice words for left, right, front, back, and near/far.</string>
+
+    <string name="day_18_number">Day 18</string>
+    <string name="day_18_title">Adjectives 2</string>
+    <string name="day_18_descriptions">Learn more adjectives such as beautiful, quiet, noisy, and fun.</string>
+
+    <string name="day_19_number">Day 19</string>
+    <string name="day_19_title">Weather</string>
+    <string name="day_19_descriptions">Learn vocabulary for different types of weather and seasons.</string>
+
+    <string name="day_20_number">Day 20</string>
+    <string name="day_20_title">Shopping Phrases</string>
+    <string name="day_20_descriptions">Practice basic shopping expressions and asking for prices.</string>
+
+    <string name="day_21_number">Day 21</string>
+    <string name="day_21_title">Animals</string>
+    <string name="day_21_descriptions">Learn names of common animals in Japanese.</string>
+
+    <string name="day_22_number">Day 22</string>
+    <string name="day_22_title">Transport</string>
+    <string name="day_22_descriptions">Learn vocabulary for transport like bus, train, car, and bicycle.</string>
+
+    <string name="day_23_number">Day 23</string>
+    <string name="day_23_title">Daily Routine</string>
+    <string name="day_23_descriptions">Practice phrases for daily actions such as wake up, eat, go, and sleep.</string>
+
+    <string name="day_24_number">Day 24</string>
+    <string name="day_24_title">Hobbies</string>
+    <string name="day_24_descriptions">Learn how to talk about hobbies and interests in Japanese.</string>
+
+    <string name="day_25_number">Day 25</string>
+    <string name="day_25_title">Simple Sentences</string>
+    <string name="day_25_descriptions">Practice making short sentences with nouns, verbs, and adjectives.</string>
+
+    <string name="day_26_number">Day 26</string>
+    <string name="day_26_title">Questions with 何</string>
+    <string name="day_26_descriptions">Practice using 何 (what) in different question patterns.</string>
+
+    <string name="day_27_number">Day 27</string>
+    <string name="day_27_title">Introductions</string>
+    <string name="day_27_descriptions">Practice how to introduce yourself and ask about others.</string>
+
+    <string name="day_28_number">Day 28</string>
+    <string name="day_28_title">Review Hiragana</string>
+    <string name="day_28_descriptions">Review all hiragana characters learned so far.</string>
+
+    <string name="day_29_number">Day 29</string>
+    <string name="day_29_title">Review Katakana</string>
+    <string name="day_29_descriptions">Review all katakana characters learned so far.</string>
+
+    <string name="day_30_number">Day 30</string>
+    <string name="day_30_title">Mini Test</string>
+    <string name="day_30_descriptions">Take a mini test with vocabulary, phrases, and writing practice.</string>
+
 </resources>
