@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">MyCity</string>
+
+    <string name="category_historic_sites">Historic Sites</string>
+    <string name="category_street_food">Street Food</string>
+    <string name="category_shopping_malls">Shopping Malls</string>
+    <string name="category_train_stations">Major Train Stations</string>
+
+    <string name="historic_site_monas">Monumen Nasional (Monas)</string>
+    <string name="historic_site_monas_desc">A 132-meter tower in the center of Merdeka Square, symbolizing the fight for Indonesia.</string>
+    <string name="historic_site_kota_tua">Kota Tua (Old Town)</string>
+    <string name="historic_site_kota_tua_desc">The historic center of colonial-era Jakarta with Dutch-style buildings and museums.</string>
+
+    <string name="street_food_sabang">Jalan Sabang</string>
+    <string name="street_food_sabang_desc">A famous street packed with legendary food stalls, especially known for satay and local dishes.</string>
+    <string name="street_food_blok_m">Blok M</string>
+    <string name="street_food_blok_m_desc">A vibrant area known for its variety of street food, from gulai to Japanese snacks.</string>
+
+    <string name="mall_grand_indonesia">Grand Indonesia</string>
+    <string name="mall_grand_indonesia_desc">A massive, modern mall with a vast selection of international brands, restaurants, and entertainment.</string>
+    <string name="mall_plaza_indonesia">Plaza Indonesia</string>
+    <string name="mall_plaza_indonesia_desc">A high-end luxury mall known for its collection of designer brands and upscale dining.</string>
+
+    <string name="station_gambir">Stasiun Gambir</string>
+    <string name="station_gambir_desc">The main station for long-distance, executive-class trains connecting Jakarta to other major cities.</string>
+    <string name="station_jakarta_kota">Stasiun Jakarta Kota</string>
+    <string name="station_jakarta_kota_desc">A major commuter hub and a beautiful historic building from the colonial era.</string>
 </resources>
