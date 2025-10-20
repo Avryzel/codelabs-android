@@ -1,11 +1,14 @@
 package com.example.mycity.ui
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Surface
@@ -20,8 +23,30 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.mycity.R
 import com.example.mycity.data.Category
+import com.example.mycity.data.LocalDataProvider
 import com.example.mycity.data.Place
 import com.example.mycity.ui.theme.MyCityTheme
+
+@Composable
+fun CategoryList(
+    categories: List<Category>,
+    onItemClick: (Category) -> Unit,
+    modifier: Modifier = Modifier,
+    contentPadding: PaddingValues = PaddingValues(0.dp)
+
+) {
+    LazyColumn(
+        contentPadding = contentPadding,
+        modifier = modifier
+    ) {
+        items(categories) { category ->
+            CategoryListItem(
+                category = category,
+                onItemClick = onItemClick
+            )
+        }
+    }
+}
 
 @Composable
 private fun CategoryListItem(
@@ -49,6 +74,21 @@ private fun CategoryListItem(
             Text(
                 text = stringResource(category.nameRes),
                 textAlign = TextAlign.Start,
+            )
+        }
+    }
+}
+
+@Preview(
+    showBackground = true,
+)
+@Composable
+fun CategoryListPreview() {
+    MyCityTheme {
+        Surface {
+            CategoryList(
+                categories = LocalDataProvider.categories,
+                onItemClick = {}
             )
         }
     }
