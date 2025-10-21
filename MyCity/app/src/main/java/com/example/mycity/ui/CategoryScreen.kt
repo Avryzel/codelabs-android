@@ -29,7 +29,7 @@ import com.example.mycity.data.Place
 import com.example.mycity.ui.theme.MyCityTheme
 
 @Composable
-fun CategoryList(
+fun CategoryScreen(
     categories: List<Category>,
     onItemClick: (Category) -> Unit,
     modifier: Modifier = Modifier,
@@ -89,7 +89,7 @@ private fun CategoryListItem(
 fun CategoryListPreview() {
     MyCityTheme {
         Surface {
-            CategoryList(
+            CategoryScreen(
                 categories = LocalDataProvider.categories,
                 onItemClick = {}
             )
