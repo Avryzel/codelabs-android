@@ -1,11 +1,15 @@
 package com.example.mycity.ui
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Surface
@@ -21,6 +25,27 @@ import androidx.compose.ui.unit.dp
 import com.example.mycity.R
 import com.example.mycity.data.Place
 import com.example.mycity.ui.theme.MyCityTheme
+
+@Composable
+fun PlaceScreen(
+    places: List<Place>,
+    onItemClick: (Place) -> Unit,
+    modifier: Modifier = Modifier,
+    contentPadding: PaddingValues = PaddingValues(0.dp)
+) {
+    LazyColumn(
+        contentPadding = contentPadding,
+        modifier = modifier
+    ) {
+        items(places) { place ->
+            PlaceListItem(
+                place = place,
+                onItemClick = onItemClick,
+                modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
+            )
+        }
+    }
+}
 
 @Composable
 private fun PlaceListItem(
@@ -48,6 +73,33 @@ private fun PlaceListItem(
             Text(
                 text = stringResource(place.nameRes),
                 textAlign = TextAlign.Start,
+            )
+        }
+    }
+}
+
+@Preview(
+    showBackground = true,
+    showSystemUi = true
+)
+@Composable
+fun PlaceScreenPreview() {
+    MyCityTheme {
+        Surface {
+            PlaceScreen(
+                places = listOf(
+                    Place(
+                        nameRes = R.string.historic_site_monas,
+                        descRes = R.string.historic_site_monas_desc,
+                        imageRes = R.drawable.ic_launcher_background
+                    ),
+                    Place(
+                        nameRes = R.string.historic_site_kota_tua,
+                        descRes = R.string.historic_site_kota_tua_desc,
+                        imageRes = R.drawable.ic_launcher_background
+                    )
+                ),
+                onItemClick = {}
             )
         }
     }
