@@ -1,5 +1,6 @@
 package com.example.mycity.ui
 
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -17,7 +18,6 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.mycity.R
 import com.example.mycity.data.LocalDataProvider
-import com.example.mycity.data.Place
 
 enum class MyAppScreen {
     Category,
@@ -43,12 +43,18 @@ fun MyCityApp(
         NavHost(
             navController = navController,
             startDestination = MyAppScreen.Category.name,
-            modifier = Modifier.padding(innerPadding)
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding)
         ) {
             composable(route = MyAppScreen.Category.name) {
                 CategoryScreen(
                     categories = LocalDataProvider.categories,
-                    onItemClick = {},
+                    onItemClick = { category ->
+                        viewModel.selectedCategory(category)
+                        navController.navigate(MyAppScreen.Place.name)
+                    },
+                    modifier = Modifier.fillMaxSize()
                 )
             }
 
@@ -57,7 +63,11 @@ fun MyCityApp(
 
                 PlaceScreen(
                     places = currentPlace,
-                    onItemClick = {}
+                    onItemClick = { place ->
+                        viewModel.selectedPlace(place)
+                        navController.navigate(MyAppScreen.Detail.name)
+                    },
+                    modifier = Modifier.fillMaxSize()
                 )
             }
 
@@ -67,6 +77,7 @@ fun MyCityApp(
                 if (selectedPlace != null) {
                     PlaceDetailScreen(
                         place = selectedPlace,
+                        modifier = Modifier.fillMaxSize()
                     )
                 }
             }
