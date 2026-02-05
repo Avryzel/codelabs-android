@@ -1,5 +1,6 @@
 package com.example.mycity.ui
 
+import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.CenterAlignedTopAppBar
@@ -19,10 +20,10 @@ import androidx.navigation.compose.rememberNavController
 import com.example.mycity.R
 import com.example.mycity.data.LocalDataProvider
 
-enum class MyAppScreen {
-    Category,
-    Place,
-    Detail
+enum class MyAppScreen(@StringRes val title: Int) {
+    Category(title = R.string.app_name),
+    Place(title = R.string.choose_place),
+    Detail(title = R.string.place_detail)
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
