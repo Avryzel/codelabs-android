@@ -2,6 +2,7 @@
     <string name="app_name">MyCity</string>
     <string name="choose_place">Explore Places</string>
     <string name="place_detail">Location Details</string>
+    <string name="back_button">Back</string>
 
     <string name="category_historic_sites">Historic Sites</string>
     <string name="category_street_food">Street Food</string>
