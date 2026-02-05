@@ -10,19 +10,35 @@
     <string name="historic_site_monas_desc">A 132-meter tower in the center of Merdeka Square, symbolizing the fight for Indonesia.</string>
     <string name="historic_site_kota_tua">Kota Tua (Old Town)</string>
     <string name="historic_site_kota_tua_desc">The historic center of colonial-era Jakarta with Dutch-style buildings and museums.</string>
+    <string name="historic_site_national_museum">National Museum (Museum Nasional)</string>
+    <string name="historic_site_national_museum_desc">The \"Elephant Building\" showcasing Indonesia\'s rich archaeological and ethnological history.</string>
+    <string name="historic_site_istiqlal">Istiqlal Mosque</string>
+    <string name="historic_site_istiqlal_desc">The largest mosque in Southeast Asia, standing as a symbol of Indonesian independence.</string>
 
     <string name="street_food_sabang">Jalan Sabang</string>
     <string name="street_food_sabang_desc">A famous street packed with legendary food stalls, especially known for satay and local dishes.</string>
     <string name="street_food_blok_m">Blok M</string>
     <string name="street_food_blok_m_desc">A vibrant area known for its variety of street food, from gulai to Japanese snacks.</string>
+    <string name="street_food_gultik">Gultik Blok M</string>
+    <string name="street_food_gultik_desc">Legendary beef curry (Gulai Tikungan) served in small portions at the busy corner of Blok M.</string>
+    <string name="street_food_nasi_goreng_sirih">Nasi Goreng Kebon Sirih</string>
+    <string name="street_food_nasi_goreng_sirih_desc">Famous aromatic goat fried rice cooked in massive woks using a recipe from 1958.</string>
 
     <string name="mall_grand_indonesia">Grand Indonesia</string>
     <string name="mall_grand_indonesia_desc">A massive, modern mall with a vast selection of international brands, restaurants, and entertainment.</string>
     <string name="mall_plaza_indonesia">Plaza Indonesia</string>
     <string name="mall_plaza_indonesia_desc">A high-end luxury mall known for its collection of designer brands and upscale dining.</string>
+    <string name="mall_senayan_city">Senayan City</string>
+    <string name="mall_senayan_city_desc">A high-end shopping destination featuring luxury brands and premium lifestyle experiences.</string>
+    <string name="mall_kotakasablanka">Kota Kasablanka</string>
+    <string name="mall_kotakasablanka_desc">A massive mall known for its wide variety of international fashion and dining options.</string>
 
     <string name="station_gambir">Stasiun Gambir</string>
     <string name="station_gambir_desc">The main station for long-distance, executive-class trains connecting Jakarta to other major cities.</string>
     <string name="station_jakarta_kota">Stasiun Jakarta Kota</string>
     <string name="station_jakarta_kota_desc">A major commuter hub and a beautiful historic building from the colonial era.</string>
+    <string name="station_manggarai">Stasiun Manggarai</string>
+    <string name="station_manggarai_desc">The main transit hub for the city\'s commuter rail and airport train services.</string>
+    <string name="station_sudirman">Stasiun Sudirman</string>
+    <string name="station_sudirman_desc">A modern station connecting the business district with the wider Jakarta commuter network.</string>
 </resources>
