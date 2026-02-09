@@ -11,6 +11,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.windowsizeclass.WindowWidthSizeClass
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -24,6 +25,8 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.mycity.R
 import com.example.mycity.data.LocalDataProvider
+import com.example.mycity.utils.MyCityContentType
+import com.example.mycity.utils.MyCityNavigationType
 
 enum class MyAppScreen(@StringRes val title: Int) {
     Category(title = R.string.app_name),
@@ -61,13 +64,39 @@ fun MyCityAppBar(
 @Composable
 fun MyCityApp(
     viewModel: MyCityViewModel = viewModel(),
-    navController: NavHostController = rememberNavController()
+    navController: NavHostController = rememberNavController(),
+    windowsSize: WindowWidthSizeClass
 ) {
     val backStackEntry by navController.currentBackStackEntryAsState()
 
     val currentScreen = MyAppScreen.valueOf(
         backStackEntry?.destination?.route ?: MyAppScreen.Category.name
     )
+
+    val navigationType: MyCityNavigationType
+    val contentType: MyCityContentType
+
+    when (windowsSize) {
+        WindowWidthSizeClass.Compact -> {
+            navigationType = MyCityNavigationType.BOTTOM_NAVIGATION
+            contentType = MyCityContentType.ListOnly
+        }
+
+        WindowWidthSizeClass.Medium -> {
+            navigationType = MyCityNavigationType.NAVIGATION_RAIL
+            contentType = MyCityContentType.ListOnly
+        }
+
+        WindowWidthSizeClass.Expanded -> {
+            navigationType = MyCityNavigationType.PERMANENT_NAVIGATION_DRAWER
+            contentType = MyCityContentType.ListAndDetail
+        }
+
+        else -> {
+            navigationType = MyCityNavigationType.BOTTOM_NAVIGATION
+            contentType = MyCityContentType.ListOnly
+        }
+    }
 
     Scaffold(
         topBar = {
