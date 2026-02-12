@@ -5,19 +5,28 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.List
+import androidx.compose.material.icons.filled.List
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.NavigationBar
+import androidx.compose.material3.NavigationBarDefaults
+import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.windowsizeclass.WindowWidthSizeClass
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavHost
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -28,10 +37,10 @@ import com.example.mycity.data.LocalDataProvider
 import com.example.mycity.utils.MyCityContentType
 import com.example.mycity.utils.MyCityNavigationType
 
-enum class MyAppScreen(@StringRes val title: Int) {
-    Category(title = R.string.app_name),
-    Place(title = R.string.choose_place),
-    Detail(title = R.string.place_detail)
+enum class MyAppScreen(@StringRes val title: Int, val icon: ImageVector) {
+    Category(title = R.string.app_name, icon = Icons.AutoMirrored.Filled.List),
+    Place(title = R.string.choose_place, icon = Icons.AutoMirrored.Filled.List),
+    Detail(title = R.string.place_detail, icon = Icons.AutoMirrored.Filled.List)
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -58,6 +67,26 @@ fun MyCityAppBar(
 
         }
     )
+}
+
+@Composable
+private fun MyCityBottomNavBar(
+    currentScreen: MyAppScreen,
+    onTabSelected: (MyAppScreen) -> Unit,
+    modifier: Modifier = Modifier
+) {
+    NavigationBar(windowInsets = NavigationBarDefaults.windowInsets, modifier = modifier) {
+        MyAppScreen.entries.forEach { screen ->
+            NavigationBarItem(
+                selected = currentScreen == screen,
+                onClick = {
+                    onTabSelected(screen)
+                },
+                label = { Text(stringResource(screen.title)) },
+                icon = { Icon(imageVector = screen.icon, contentDescription = null) }
+            )
+        }
+    }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -106,6 +135,16 @@ fun MyCityApp(
 
                 navigateUp = { navController.navigateUp() }
             )
+        },
+        bottomBar = {
+            if (navigationType == MyCityNavigationType.BOTTOM_NAVIGATION) {
+                MyCityBottomNavBar(
+                    currentScreen = currentScreen,
+                    onTabSelected = { screen ->
+                        navController.navigate(screen.name)
+                    }
+                )
+            }
         }
     ) { innerPadding ->
         val uiState by viewModel.uiState.collectAsState()
