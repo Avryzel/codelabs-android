@@ -33,6 +33,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.mycity.R
+import com.example.mycity.data.Category
 import com.example.mycity.data.LocalDataProvider
 import com.example.mycity.utils.MyCityContentType
 import com.example.mycity.utils.MyCityNavigationType
@@ -75,8 +76,10 @@ private fun MyCityBottomNavBar(
     onTabSelected: (MyAppScreen) -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val topLevelDestination = listOf(MyAppScreen.Category)
+
     NavigationBar(windowInsets = NavigationBarDefaults.windowInsets, modifier = modifier) {
-        MyAppScreen.entries.forEach { screen ->
+        topLevelDestination.forEach { screen ->
             NavigationBarItem(
                 selected = currentScreen == screen,
                 onClick = {
